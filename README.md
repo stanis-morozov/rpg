@@ -10,6 +10,7 @@ It performs a fast relevance retrieval over a large-scale database with a given 
 * Run the Makefile to compile c++ sources
   * ```sudo apt-get install --upgrade gcc g++ libstdc++6 make```
   * ```make```
+  * ```chmod u+x download.py compute_scores.py```
 * To work with pretrained GBDT model you also need Python packages from `requirements.txt`  
 
 # How do I run it?

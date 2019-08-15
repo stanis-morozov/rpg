@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 from os.path import join
 import os, requests
