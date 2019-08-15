@@ -31,9 +31,9 @@ It performs a fast relevance retrieval over a large-scale database with a given 
    * `./RPG --mode base --baseSize 1000000 --trainQueries 1000 --base data/sift/train_sift.bin  --outputGraph data/sift/graph.out --relevanceVector 100 --efConstruction 1000 --M 8`
    * `./RPG --mode query --baseSize 1000000 --querySize 1000 --query data/sift/test_sift.bin --inputGraph data/sift/graph.out --efSearch 300 --topK 5 --output data/sift/result.txt --gtQueries 1000 --gtTop 100 --groundtruth data/sift/groundtruth_sift.bin`
 * To perform experiments on Collections dataset run:
-   * `./RPG --mode base --baseSize 1000000 --trainQueries 1000 --base data/collections/data/model_scores/scores_train.bin --outputGraph data/collections/graph.out --relevanceVector 100 --efConstruction 1000 --M 8`
+   * `./RPG --mode base --baseSize 1000000 --trainQueries 1000 --base data/collections/data/model_scores/scores_train.bin --outputGraph data/collections/graph.out --relevanceVector 1000 --efConstruction 1000 --M 8`
    * `./RPG --mode query --baseSize 1000000 --querySize 1000 --query data/collections/data/model_scores/scores_test.bin --inputGraph data/collections/graph.out --efSearch 300 --topK 5 --output data/collections/result.txt --gtQueries 1000 --gtTop 100 --groundtruth data/collections/data/model_scores/groundtruth.bin`
 * To perform experiments on Video dataset run:
-   * `./RPG --mode base --baseSize 1000000 --trainQueries 1000 --base data/video/data/model_scores/scores_train.bin --outputGraph data/video/graph.out --relevanceVector 100 --efConstruction 1000 --M 8`
+   * `./RPG --mode base --baseSize 1000000 --trainQueries 1000 --base data/video/data/model_scores/scores_train.bin --outputGraph data/video/graph.out --relevanceVector 1000 --efConstruction 1000 --M 8`
    * `./RPG --mode query --baseSize 1000000 --querySize 1000 --query data/video/data/model_scores/scores_test.bin --inputGraph data/video/graph.out --efSearch 300 --topK 5 --output data/video/result.txt --gtQueries 1000 --gtTop 100 --groundtruth data/video/data/model_scores/groundtruth.bin`
 5. You can vary `efSearch` to achieve higher recall values.
