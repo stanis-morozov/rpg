@@ -35,3 +35,4 @@ It performs a fast relevance retrieval over a large-scale database with a given 
 * To perform experiments on Video dataset run:
    * `./RPG --mode base --baseSize 1000000 --trainQueries 1000 --base data/video/data/model_scores/scores_train.bin --outputGraph data/video/graph.out --relevanceVector 100 --efConstruction 1000 --M 8`
    * `./RPG --mode query --baseSize 1000000 --querySize 1000 --query data/video/data/model_scores/scores_test.bin --inputGraph data/video/graph.out --efSearch 300 --topK 5 --output data/video/result.txt --gtQueries 1000 --gtTop 100 --groundtruth data/video/data/model_scores/groundtruth.bin`
+5. You can vary `efSearch` to achieve higher recall values.
