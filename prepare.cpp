@@ -184,6 +184,9 @@ int main(int argc, char *argv[])
             break;
         }
     }
+    if (!outfolder.empty()) {
+        outfolder += "/";
+    }
 
 
     distances.resize((long long)basesize * querysize);
@@ -222,13 +225,13 @@ int main(int argc, char *argv[])
     std::ofstream test_file;
     std::ofstream gt_file;
     if (suffix.empty()) {
-        train_file.open(outfolder + "./train.bin", std::ios::binary);
-        test_file.open(outfolder + "./test.bin", std::ios::binary);
-        gt_file.open(outfolder + "./groundtruth.bin", std::ios::binary);
+        train_file.open(outfolder + "train.bin", std::ios::binary);
+        test_file.open(outfolder + "test.bin", std::ios::binary);
+        gt_file.open(outfolder + "groundtruth.bin", std::ios::binary);
     } else {
-        train_file.open(outfolder + "./train_" + suffix + ".bin", std::ios::binary);
-        test_file.open(outfolder + "./test_" + suffix + ".bin", std::ios::binary);
-        gt_file.open(outfolder + "./groundtruth_" + suffix + ".bin", std::ios::binary);
+        train_file.open(outfolder + "train_" + suffix + ".bin", std::ios::binary);
+        test_file.open(outfolder + "test_" + suffix + ".bin", std::ios::binary);
+        gt_file.open(outfolder + "groundtruth_" + suffix + ".bin", std::ios::binary);
     }
 
     gt_file.write((char*)gt.data(), sizeof(int) * (long long)testsize * topsize);
