@@ -1,5 +1,5 @@
 # Relevance Proximity Graphs
-A supplementary code for Relevance Proximity Graphs for Fast Relevance Retrieval.
+A supplementary code for Relevance Proximity Graphs for Fast Relevance Retrieval. This implementation is substantially based on HNSW code [https://github.com/nmslib/hnswlib](https://github.com/nmslib/hnswlib).
 
 # What does it do?
 It performs a fast relevance retrieval over a large-scale database with a given relevance function. The relevance function is defined on the `(query, item)` pairs without predefined similarity measure between two items or two queries.
