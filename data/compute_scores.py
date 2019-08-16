@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
             res = model.get_scores(ids)
 
-            precomputed_scores = np.fromfile(join(dataset, 'data/model_scores/scores_' + mode + '.bin'), dtype=np.float32).reshape((10**3, 10**6))
+            precomputed_scores = np.fromfile(join(dataset, 'data/model_scores/scores_' + mode + '.bin'), dtype=np.float32).reshape((10**6, 10**3)).T
             ans = precomputed_scores[np.array(ids)[:, 0], np.array(ids)[:, 1]]
 
             print('Difference with precomputed data:', np.linalg.norm(res - ans) / np.linalg.norm(ans))
